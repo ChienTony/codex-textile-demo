@@ -1,0 +1,6 @@
+order_id,customer,fabric,color,yards,unit_price
+A001,Sunrise Apparel,Cotton Twill,Navy,120,85
+A002,Blue Ocean Uniforms,Polyester,Black,80,60
+A003,Sunrise Apparel,Linen,White,50,120
+A004,Metro Studio,Cotton Twill,Gray,,85
+A005,Blue Ocean Uniforms,Nylon,Black,40,95
