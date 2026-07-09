@@ -17,7 +17,34 @@ The script in `src/order_summary.py` reads the CSV and prints a small order summ
 
 One row intentionally has a blank `yards` value. The desired behavior is to skip invalid rows and report a warning instead of crashing.
 
+## Course branches
+
+This repository is used with two local teaching branches:
+
+- `starter`: intentionally contains the blank-`yards` bug for the hands-on exercise.
+- `solution` / `main`: contains the completed reference implementation.
+
+For the course exercise, start from the buggy branch:
+
+```bash
+git checkout starter
+python3 -m unittest discover -s tests -v
+python3 src/order_summary.py sample_data/orders.csv
+```
+
+The unit tests on `starter` are intentionally incomplete and may pass before the bug is fixed. The CLI smoke command is expected to reveal the problem until learners add a regression test and fix the code.
+
+To compare with the reference answer later:
+
+```bash
+git checkout solution
+python3 src/order_summary.py sample_data/orders.csv
+python3 -m unittest discover -s tests -v
+```
+
 ## Quick start
+
+On the completed `main` / `solution` branch:
 
 ```bash
 python3 src/order_summary.py sample_data/orders.csv
