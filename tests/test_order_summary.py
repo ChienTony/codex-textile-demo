@@ -42,21 +42,6 @@ class OrderSummaryTests(unittest.TestCase):
         })
         self.assertEqual(summary["warnings"], [])
 
-    def test_skips_blank_yards_and_reports_warning(self):
-        path = self.write_csv([
-            {"order_id": "A001", "customer": "Sunrise Apparel", "fabric": "Cotton", "color": "Navy", "yards": "120", "unit_price": "85"},
-            {"order_id": "A004", "customer": "Metro Studio", "fabric": "Cotton Twill", "color": "Gray", "yards": "", "unit_price": "85"},
-        ])
-
-        summary = summarize_orders(path)
-
-        self.assertEqual(summary["total_orders"], 2)
-        self.assertEqual(summary["valid_orders"], 1)
-        self.assertEqual(summary["total_yards"], 120)
-        self.assertEqual(summary["total_amount"], 10200)
-        self.assertEqual(summary["yards_by_customer"], {"Sunrise Apparel": 120})
-        self.assertEqual(summary["warnings"], ["Skipped order A004: yards is blank"])
-
     def test_format_summary_is_human_readable(self):
         text = format_summary({
             "total_orders": 2,

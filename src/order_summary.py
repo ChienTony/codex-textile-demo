@@ -16,21 +16,9 @@ def summarize_orders(csv_path):
     with Path(csv_path).open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
             summary["total_orders"] += 1
-            order_id = row.get("order_id") or f"row {summary['total_orders']}"
             customer = row.get("customer", "Unknown")
-            yards_text = (row.get("yards") or "").strip()
-            unit_price_text = (row.get("unit_price") or "").strip()
-
-            if not yards_text:
-                summary["warnings"].append(f"Skipped order {order_id}: yards is blank")
-                continue
-
-            try:
-                yards = int(yards_text)
-                unit_price = int(unit_price_text)
-            except ValueError:
-                summary["warnings"].append(f"Skipped order {order_id}: numeric field is invalid")
-                continue
+            yards = int(row.get("yards", "0"))
+            unit_price = int(row.get("unit_price", "0"))
 
             summary["valid_orders"] += 1
             summary["total_yards"] += yards
