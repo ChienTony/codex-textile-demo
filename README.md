@@ -6,9 +6,10 @@ A tiny textile-order reporting project for the Codex three-hour hands-on course.
 
 請先打開：
 
-- [SHELL-CHEATSHEET.md](./SHELL-CHEATSHEET.md)
+- [SHELL-CHEATSHEET.md](./SHELL-CHEATSHEET.md)：課堂階段式 shell 指令速查
+- [Git功能速查-Codex試跑.md](./Git功能速查-Codex試跑.md)：這次 Codex 試跑用到的 Git 安全操作
 
-這份檔案依照課程階段整理了可直接複製的 shell 指令。
+這些檔案依照課程與試跑流程整理了可直接複製的指令。
 如果你卡住，請不要自己亂猜，先回到對應階段照著操作。
 
 The project intentionally stays small so learners can focus on the Codex workflow:
