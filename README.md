@@ -2,6 +2,15 @@
 
 A tiny textile-order reporting project for the Codex three-hour hands-on course.
 
+## 課堂中不知道下一步怎麼操作？
+
+請先打開：
+
+- [SHELL-CHEATSHEET.md](./SHELL-CHEATSHEET.md)
+
+這份檔案依照課程階段整理了可直接複製的 shell 指令。
+如果你卡住，請不要自己亂猜，先回到對應階段照著操作。
+
 The project intentionally stays small so learners can focus on the Codex workflow:
 
 1. Ask Codex to understand the repo before changing files.
